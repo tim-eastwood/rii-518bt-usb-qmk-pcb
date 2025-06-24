@@ -21,27 +21,11 @@ This repository contains everything needed to build a replacement PCB for the [R
 - **Gerber files** for fabrication  
 - **Bill of Materials (BOM)** populated with JLCPCB part numbers  
 - **Placement file** for pick-and-place assembly  
-- `rii/518bt/` QMK keyboard folder for building firmware
+- **Firmware file** for flashing the STM32F with QMK
 
 ## QMK Firmware
 
-The `rii/518bt` folder can be copied or symlinked into your local `qmk_firmware/keyboards/` directory.
-
-### Compiling
-
-In [QMK MSYS](https://docs.qmk.fm/newbs_getting_started#set-up-your-environment), run:
-
-```sh
-qmk compile -kb rii/518bt -km default
-```
-
-### Flashing
-
-To compile and flash directly:
-
-```sh
-qmk flash -kb rii/518bt -km default
-```
+The source for the firmware is located at [https://github.com/tim-eastwood/QMK-rii-518bt-usb](https://github.com/tim-eastwood/QMK-rii-518bt-usb/blob/master/keyboards/rii/518bt/readme.md) `./keyboards/rii`. View the README at that link for flashing / compiling instructions.
 
 ## Bootloader Instructions
 
