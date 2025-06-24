@@ -1,33 +1,33 @@
 Rii 518BT (Custom USB PCB)
 ===
 
-This project replaces the original Bluetooth-only PCB in the Rii 518BT with a custom-designed USB-compatible PCB based on an STM32 microcontroller.
+This firmware is used with [a custom PCB](https://github.com/tim-eastwood/rii-518bt-usb-qmk-pcb) to replace the original, which is Bluetooth-only, in the Rii 518BT. The drop-in replacement provides a USB2.0 interface, better backlighting, and of course supports QMK.
 
-![Rii 518BT](https://raw.githubusercontent.com/tim-eastwood/rii-518bt/main/images/rii-518bt-render.jpg) <!-- Replace with your actual image URL if available -->
+![Rii 518BT](https://raw.githubusercontent.com/tim-eastwood/rii-518bt-usb-qmk-pcb/main/pics/1.png)
 
-A compact 68-key keyboard using a custom matrix and firmware designed for full USB support and QMK compatibility.
+The Rii 518bt is an ultra-compact 68-key keyboard.
 
-**Keyboard Maintainer:** [Tim Eastwood](https://github.com/tim-eastwood)  
-**Hardware Supported:** Rii 518BT with custom USB/STM32 PCB  
-**Hardware Availability:** Custom PCB design by Tim Eastwood
-
----
-
-## Build Instructions
-
-Make example for this keyboard (after setting up your build environment):
-
-```
-make rii/518bt:default
-```
-
-To flash the firmware (replace `dfu-util` or your method as needed):
-
-```
-make rii/518bt:default:flash
-```
+**Keyboard Maintainer:** [Tim / Tangles](https://github.com/tim-eastwood/QMK-rii-518bt-usb)  
+**Hardware Supported:** Rii 518BT with [custom USB/STM32F072 PCB](https://github.com/tim-eastwood/rii-518bt-usb-qmk-pcb)
+**Hardware Availability:** Build it yourself using any PCBA service using the source files / BoM located at [https://github.com/tim-eastwood/rii-518bt-usb-qmk-pcb](https://github.com/tim-eastwood/rii-518bt-usb-qmk-pcb)
 
 ---
+
+## Compiling
+
+In [QMK MSYS](https://docs.qmk.fm/newbs_getting_started#set-up-your-environment), run:
+
+```sh
+qmk compile -kb rii/518bt -km default
+```
+
+## Flashing
+
+To compile and flash directly:
+
+```sh
+qmk flash -kb rii/518bt -km default
+```
 
 ## Resources
 
@@ -38,3 +38,5 @@ make rii/518bt:default:flash
 ---
 
 This is an independent hardware project and is not affiliated with Rii or the original manufacturer.
+
+Purchasing a Rii 518BT is required to obtain the housing, key membrane, and adhesive sheet of dome switches.
